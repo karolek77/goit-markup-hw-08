@@ -1,0 +1,213 @@
+@import "../utils/vars";
+/* ########## backdrop ########## */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: visibility, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: $cubic-bezier;
+}
+.modal {
+  height: 581px;
+  width: 528px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  transition: transform, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+  }
+
+  &__label-name {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    color: $second-color-text;
+  }
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $text-button;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* ########## form modal window ##########*/
+.modal__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal {
+  &__input-wrapper {
+    position: relative;
+  }
+
+  &__icon-input {
+    position: absolute;
+    transition: fill 250ms $cubic-bezier;
+    left: 10px;
+    top: 11px;
+  }
+}
+
+.modal__input-box {
+  width: 448px;
+  height: 40px;
+  border: 1px solid $border-input;
+  border-radius: 4px;
+  padding-left: 42px;
+  margin-bottom: 10px;
+  transition: border-color 250ms $cubic-bezier;
+
+  &:focus {
+    border-color: $Selection-color;
+    outline: none;
+  }
+
+  &:focus + .icon-input {
+    fill: $Selection-color;
+  }
+}
+
+.modal__text-textarea {
+  resize: none;
+  padding: 12px 16px;
+  border: 1px solid $border-input;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transition: border-color 250ms $cubic-bezier;
+
+  &::placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus {
+    border-color: $Selection-color;
+    outline: none;
+  }
+}
+/* ########## checkbox ########## */
+
+.modal__check_box {
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $main-text-color;
+    border-radius: 2px;
+  }
+}
+
+.modal__checkbox_hide {
+  visibility: hidden;
+
+  &:checked + .modal__check_box:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 16px;
+    height: 15px;
+    background-color: $Selection-color;
+    background-image: url(../images/checkicon.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 2px;
+  }
+}
+
+.modal {
+  &__form_rules {
+    display: flex;
+  }
+
+  &__rules_form {
+    margin-left: 25px;
+    margin-right: 14px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $second-color-text;
+    margin-bottom: 30px;
+  }
+}
+
+.modal__link_modal {
+  text-decoration-line: underline;
+  color: $Selection-color;
+}
+
+.modal__btn_form {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+
+  background: $Selection-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88px;
+  letter-spacing: 0.06em;
+  color: $text-button;
+  cursor: pointer;
+  transition: background-color 250ms $cubic-bezier,
+    box-shadow 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    background-color: $Selection-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

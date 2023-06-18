@@ -1,0 +1,37 @@
+@import "../utils/vars";
+.clients {
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    margin: 50px 0 0 0;
+    padding: 0 15px;
+    justify-content: space-between;
+  }
+}
+.clients__icon-box {
+  width: 170px;
+  height: 92px;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+  transition: border-color 250ms $cubic-bezier;
+
+  &:hover,
+  &:hover .clients__logo {
+    border-color: $Selection-color;
+    fill: $Selection-color;
+  }
+}
+.clients__logo {
+  fill: $icon-color;
+  margin: 16px 32px;
+  transition: fill 250ms $cubic-bezier;
+}

@@ -1,0 +1,89 @@
+@import "../utils/vars";
+
+.team {
+  background-color: $background-color-button;
+
+  &__img-list {
+    display: flex;
+    list-style: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+.team {
+  &__surname {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    justify-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  &__profession {
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $second-color-text;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+}
+.team__card {
+  background-color: $text-button;
+  border-radius: 0px 0px 4px 4px;
+  margin: 0;
+  width: 270px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* card social-icon */
+
+.team {
+  &__icon-social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px 30px 32px;
+  }
+
+  &__social-icon {
+    fill: $icon-color;
+    transition: fill 250ms $cubic-bezier;
+  }
+}
+
+.team__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms $cubic-bezier;
+
+  &:hover .team__social-icon,
+  &:focus .team__social-icon {
+    fill: $text-button;
+  }
+
+  &:hover,
+  &:focus {
+    background: $Selection-color;
+  }
+}

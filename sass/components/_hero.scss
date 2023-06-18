@@ -1,0 +1,49 @@
+@import "../utils/vars";
+.hero {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.3),
+      rgba(47, 48, 58, 0.3)
+    ),
+    url("../images/img10.jpg");
+  background-size: cover;
+
+  &__head-btn {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  &__headline {
+    color: $text-button;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
+    letter-spacing: 0.06em;
+    width: 696px;
+  }
+}
+
+.hero__btn-service {
+  background: $background-color-button;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  padding: 10px 41px 10px 41px;
+  transition: color 250ms $cubic-bezier, background-color 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    background-color: $Selection-color;
+    color: $text-button;
+  }
+}

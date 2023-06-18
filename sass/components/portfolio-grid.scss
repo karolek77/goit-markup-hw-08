@@ -1,0 +1,46 @@
+@import "../utils/vars";
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 34px;
+  margin-bottom: 0px;
+
+  & > li {
+    transition: box-shadow 250ms $cubic-bezier;
+  }
+  & > li:hover {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+      0 4px 4px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+
+.card-set {
+  &__bottom-card {
+    border: 1px solid $border-card;
+    border-top: none;
+    padding: 20px 24px;
+  }
+
+  &__name-project {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin: 0;
+  }
+}
+
+.card-set {
+  &__type-of-project {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: $second-color-text;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,54 @@
+/* body font */
+$body-font: Roboto, sans-serif;
+
+/* colors */
+$main-text-color: #212121;
+$background-color: #2f303a;
+$second-color-text: #757575;
+$Selection-color: #2196f3;
+$background-color-button: #f5f4fa;
+$text-color-form: rgba(255, 255, 255, 0.6);
+$border-input: rgba(33, 33, 33, 0.2);
+$text-button: #ffffff;
+$background-color-label: rgba(47, 48, 58, 0.8);
+$icon-color: #afb1b8;
+$border-card: #eeeeee;
+/* animation*/
+$cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $body-font;
+  color: $main-text-color;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

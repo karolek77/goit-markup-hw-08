@@ -1,0 +1,131 @@
+@import "../utils/vars";
+.footer {
+  background-color: $background-color;
+  padding: 60px 0;
+
+  &__logo-text {
+    font-family: "Raleway";
+    color: $text-button;
+    font-weight: 700;
+    font-size: 26px;
+    background-color: $background-color;
+  }
+
+  &__accent {
+    color: $Selection-color;
+  }
+}
+
+.footer__contact-link-map {
+  font-size: 14px;
+  color: $text-button;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  transition: color 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    color: $Selection-color;
+  }
+}
+
+.footer__contact-email {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: $text-color-form;
+  transition: color 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    color: $Selection-color;
+  }
+}
+
+.footer__contact-nr {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $text-color-form;
+  background-color: $background-color;
+  transition: color 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    color: $Selection-color;
+  }
+}
+
+.footer__link {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: baseline;
+
+  &-contact {
+    margin-bottom: 9px;
+    margin-top: 20px;
+  }
+}
+
+.footer__email-contact {
+  margin-bottom: 9px;
+}
+
+/* ########## footer social icon #########*/
+.footer {
+  &__list-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: auto;
+  }
+  &__title-icon {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: $text-button;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
+
+.footer {
+  &__icon-social {
+    margin-left: 70px;
+  }
+
+  &__icon {
+    fill: $text-button;
+    margin: 12px;
+  }
+}
+
+.footer__box-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  &:hover {
+    color: $Selection-color;
+  }
+}
+.footer__social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    background: $Selection-color;
+  }
+}

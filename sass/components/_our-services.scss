@@ -1,0 +1,46 @@
+@import "../utils/vars";
+.our-services {
+  &__img-list {
+    display: flex;
+    list-style: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+/*  section 3 our-services  label */
+.our-services {
+  &__img {
+    position: relative;
+  }
+  &__label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: $background-color-label;
+    padding: 27px 0px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
