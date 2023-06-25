@@ -16,8 +16,8 @@
   transition-timing-function: $cubic-bezier;
 }
 .modal {
-  height: 581px;
-  width: 528px;
+  height: 609px;
+  width: 450px;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 1);
   position: absolute;
@@ -63,6 +63,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    fill: $Selection-color;
+  }
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -89,7 +94,7 @@
 }
 
 .modal__input-box {
-  width: 448px;
+  width: 370px;
   height: 40px;
   border: 1px solid $border-input;
   border-radius: 4px;
@@ -97,12 +102,14 @@
   margin-bottom: 10px;
   transition: border-color 250ms $cubic-bezier;
 
-  &:focus {
+  &:focus,
+  &:hover {
     border-color: $Selection-color;
     outline: none;
   }
 
-  &:focus + .icon-input {
+  &:focus + .modal__icon-input,
+  &:hover + .modal__icon-input {
     fill: $Selection-color;
   }
 }
@@ -124,7 +131,8 @@
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
   }
-  &:focus {
+  &:focus,
+  &:hover {
     border-color: $Selection-color;
     outline: none;
   }
@@ -138,8 +146,8 @@
   &:before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 3px;
+    left: -13px;
+    top: -3px;
     width: 16px;
     height: 15px;
     border: 2px solid $main-text-color;
@@ -153,8 +161,8 @@
   &:checked + .modal__check_box:after {
     content: "";
     position: absolute;
-    left: 0;
-    top: 3px;
+    left: -13px;
+    top: -3px;
     width: 16px;
     height: 15px;
     background-color: $Selection-color;
@@ -171,10 +179,10 @@
   }
 
   &__rules_form {
-    margin-left: 25px;
-    margin-right: 14px;
-    font-size: 14px;
-    line-height: 1.71;
+    margin-left: 8px;
+
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     color: $second-color-text;
     margin-bottom: 30px;
@@ -209,5 +217,39 @@
   &:focus {
     background-color: $Selection-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    height: 581px;
+    width: 528px;
+  }
+
+  .modal__input-box {
+    width: 448px;
+    height: 40px;
+  }
+
+  .modal__rules_form {
+    margin-left: 25px;
+    margin-right: 14px;
+
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  .modal__check_box {
+    &:before {
+      top: 3px;
+      left: 0;
+    }
+
+    .modal__checkbox_hide {
+      &:checked + .modal__check_box:after {
+        top: 3px;
+        left: 0;
+      }
+    }
   }
 }

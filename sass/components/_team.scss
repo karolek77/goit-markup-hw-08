@@ -5,11 +5,11 @@
 
   &__img-list {
     display: flex;
+    flex-direction: column;
+    gap: 30px;
     list-style: none;
-    padding-left: 15px;
-    padding-right: 15px;
-    justify-content: space-between;
-    margin: 0;
+
+    margin: 0 auto;
   }
 
   &__title {
@@ -22,6 +22,7 @@
     margin-bottom: 50px;
   }
 }
+
 .team {
   &__surname {
     font-weight: 500;
@@ -46,8 +47,8 @@
 .team__card {
   background-color: $text-button;
   border-radius: 0px 0px 4px 4px;
-  margin: 0;
-  width: 270px;
+  margin: 0 auto;
+
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
 }
 
@@ -85,5 +86,31 @@
   &:hover,
   &:focus {
     background: $Selection-color;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .team__img-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+  }
+  .team__card {
+    width: 354px;
+  }
+}
+@media (min-width: 1200px) {
+  .team {
+    &__img-list {
+      display: flex;
+      flex-direction: row;
+
+      justify-content: space-between;
+    }
+  }
+
+  .team__card {
+    width: 270px;
   }
 }

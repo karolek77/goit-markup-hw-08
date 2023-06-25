@@ -1,4 +1,9 @@
 @import "../utils/vars";
+
+.footer__contact-container {
+  margin: 0 auto;
+}
+
 .footer {
   background-color: $background-color;
   padding: 60px 0;
@@ -9,6 +14,10 @@
     font-weight: 700;
     font-size: 26px;
     background-color: $background-color;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
   }
 
   &__accent {
@@ -16,12 +25,20 @@
   }
 }
 
-.footer__contact-link-map {
-  font-size: 14px;
-  color: $text-button;
+.footer__link-contact {
+  text-align: center;
+  width: 251px;
+
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+
+.footer__contact-link-map {
+  color: $text-button;
+
   transition: color 250ms $cubic-bezier;
 
   &:hover,
@@ -31,9 +48,6 @@
 }
 
 .footer__contact-email {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: $text-color-form;
   transition: color 250ms $cubic-bezier;
@@ -45,33 +59,15 @@
 }
 
 .footer__contact-nr {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   color: $text-color-form;
   background-color: $background-color;
+
   transition: color 250ms $cubic-bezier;
 
   &:hover,
   &:focus {
     color: $Selection-color;
   }
-}
-
-.footer__link {
-  display: flex;
-  padding-left: 15px;
-  padding-right: 15px;
-  align-items: baseline;
-
-  &-contact {
-    margin-bottom: 9px;
-    margin-top: 20px;
-  }
-}
-
-.footer__email-contact {
-  margin-bottom: 9px;
 }
 
 /* ########## footer social icon #########*/
@@ -93,12 +89,14 @@
     color: $text-button;
     text-transform: uppercase;
     margin-bottom: 20px;
+    text-align: center;
   }
 }
 
 .footer {
   &__icon-social {
-    margin-left: 70px;
+    margin-top: 54px;
+    margin-bottom: 60px;
   }
 
   &__icon {
@@ -127,5 +125,72 @@
   &:hover,
   &:focus {
     background: $Selection-color;
+  }
+}
+
+@media (max-width: 1199px) {
+  .footer__link {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    &__address-social {
+      display: flex;
+      align-items: baseline;
+      gap: 144px;
+    }
+    &__icon-social {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__link {
+    display: flex;
+
+    align-items: baseline;
+  }
+  .footer__address-social {
+    display: flex;
+    align-items: baseline;
+  }
+  .form__footer {
+    display: flex;
+  }
+  .footer__icon-social {
+    margin: 0;
+    margin-left: 70px;
+  }
+  .form__email-footer {
+    width: 358px;
+  }
+  .form__foot-text {
+    width: 207px;
+  }
+  .form__footer {
+    width: 570px;
+  }
+  .form {
+    margin-left: 78px;
+  }
+  .form__btn-foot {
+    margin-left: 10px;
+    width: 200px;
+  }
+  .footer__title-icon {
+    text-align: start;
+  }
+  .footer__logo-text {
+    display: flex;
+    justify-content: left;
+  }
+  .footer__link-contact {
+    text-align: start;
   }
 }

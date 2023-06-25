@@ -6,32 +6,55 @@
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
-    margin: 0 auto;
+    margin-bottom: 50px;
   }
 
   &__list {
-    display: flex;
-    list-style: none;
-    margin: 50px 0 0 0;
-    padding: 0 15px;
-    justify-content: space-between;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, 0fr);
+    gap: 30px;
   }
 }
-.clients__icon-box {
-  width: 170px;
-  height: 92px;
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   border: 1px solid $icon-color;
   border-radius: 4px;
   transition: border-color 250ms $cubic-bezier;
-
   &:hover,
   &:hover .clients__logo {
     border-color: $Selection-color;
     fill: $Selection-color;
   }
 }
+
+.clients__icon-box {
+  height: 92px;
+}
 .clients__logo {
   fill: $icon-color;
-  margin: 16px 32px;
-  transition: fill 250ms $cubic-bezier;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .clients__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 0fr);
+  }
+}
+@media (min-width: 1200px) {
+  .clients {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .clients__icon-box {
+      height: 92px;
+      width: 170px;
+    }
+  }
 }

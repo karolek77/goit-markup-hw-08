@@ -44,3 +44,8 @@
     justify-content: center;
   }
 }
+.our-services {
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}

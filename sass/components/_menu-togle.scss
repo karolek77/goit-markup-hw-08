@@ -1,0 +1,126 @@
+@import "../utils/vars";
+
+@media (max-width: 767px) {
+  .link {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  transition: color 250ms $cubic-bezier;
+
+  &:hover svg,
+  &:focus svg {
+    color: $Selection-color;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $text-button;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: $main-text-color;
+}
+
+.mobile-menu {
+  &__social {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+    text-align: start;
+    padding: 3px 10px;
+    color: $Selection-color;
+    text-decoration: none;
+  }
+}
+
+.mobile-menu__social-link:nth-child(-n + 3) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 302px;
+
+  &__go-links {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__go-link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #212121;
+    transition: color 250ms $cubic-bezier;
+  }
+  &__contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__contact-tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $Selection-color;
+  }
+  &__contact-link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    margin-bottom: 64px;
+    color: $second-color-text;
+  }
+  .mobile-menu__go-link:hover,
+  .mobile-menu__go-link:focus {
+    color: $Selection-color;
+  }
+}

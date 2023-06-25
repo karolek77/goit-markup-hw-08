@@ -1,10 +1,11 @@
 @import "../utils/vars";
+
 .link {
+  height: 60px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ececec;
-  padding: 24px 27px 24px 15px;
+  padding-left: 15px;
 
   /* webstudio logo */
   &__logo-text {
@@ -21,9 +22,11 @@
     color: $Selection-color;
   }
 }
-/* navigation link */
+.nav {
+  display: none;
+}
 .nav__go-links {
-  display: flex;
+  display: flex; /*flex*/
   list-style: none;
   padding: 0;
   margin-top: 0;
@@ -71,7 +74,7 @@
 }
 /* contact link */
 .contact-links {
-  display: flex;
+  display: none;
   align-items: center;
 
   &__contact-icon {
@@ -104,11 +107,55 @@
   }
 }
 
-.contact-links {
-  &__contact-link:last-child {
+@media (min-width: 768px) and (max-width: 1199px) {
+  .contact-links__contact-link:first-child {
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .link {
+    height: 80px;
+    padding-right: 15px;
+  }
+  .nav {
+    display: flex;
+    margin-left: 83px;
+  }
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: start;
+    margin-left: 101px;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .link {
+    height: 80px;
+    padding: 24px 27px 24px 15px;
+  }
+  .contact-links {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 0;
+  }
+  .contact-links__contact-link:first-child {
+    margin-left: 345px;
+  }
+  .contact-links__contact-link:last-child {
     margin-left: 30px;
   }
-  &__contact-link:first-child {
-    margin-left: 276px;
+  .nav {
+    display: flex;
+  }
+  .nav__go-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 93px;
   }
 }
