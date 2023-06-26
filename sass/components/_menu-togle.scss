@@ -60,7 +60,16 @@
   color: $main-text-color;
 }
 
+.mobile-menu__social-link:nth-child(-n + 3) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
 .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+
   &__social {
     padding: 0;
     margin: 0;
@@ -75,16 +84,6 @@
     color: $Selection-color;
     text-decoration: none;
   }
-}
-
-.mobile-menu__social-link:nth-child(-n + 3) {
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-.mobile-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 302px;
 
   &__go-links {
     display: flex;
